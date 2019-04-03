@@ -20,6 +20,7 @@
 body
 {
   margin-top: 2%;
+  overflow-x: hidden;
 }
 
 .App-link {
@@ -37,17 +38,23 @@ body
 
 #content
 {
-	margin-right: 20%;
-	margin-left: -20%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #url
 {
-  background-color: #d44638;
-  border-radius: 5px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid grey;
   padding: 5px;
-  color: white;
+  color: black;
   
+}
+#url:hover{
+	
+	box-shadow: 3px 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 button {
   background-color: #f4511e;
@@ -78,6 +85,12 @@ button:hover {opacity: 1}
 
 }
 
+#des
+{
+	text-align: justify;
+  text-justify: inter-word;
+}
+
 input
 {
     background-color: white;
@@ -91,13 +104,13 @@ input
     padding: 3px 10px;
 
 font-size:15px;
-width: 660px;
-text-align: center;
+width: 92%;
+text-align: left;
 }
 
 #search
 {
-  margin-left: 30%;
+  
   height: 30px;
 }
 
@@ -116,6 +129,7 @@ text-align: center;
 {
   font-size: 25px;
   font-weight: bold;
+  
 }
 
 #block

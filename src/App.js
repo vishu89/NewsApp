@@ -55,7 +55,7 @@ class App extends Component {
 			
 			
 			'<div id="block"> <div><span id="author">' + (this.state.items.articles[i].author)    +  '</span> ' +  '<span id="publishdate">' + '    '+ this.state.items.articles[i].publishedAt + '</span> </div>' +
-				'<br />' + '<a id="url" href=' + this.state.items.articles[i].url + '> &' + '</a>'+
+				'<br />' + '<a id="url" href=' + this.state.items.articles[i].url + '> <span>Source</span>' + '</a><br />'+
 				'<br /><div id="title">' +this.state.items.articles[i].title + '</div>' + 
 				
 				
@@ -233,15 +233,15 @@ var news = document.querySelector("#s_news");
 			<button type="submit"className="button"> Search </button>
 			
 			
-			</form><br /><br />
-	  
+			</form>
+	  </div><br /><br /><br />
       <div className="App" id="app">
 	  
 	  
 	  </div>
 				
 				
-		</div>
+		
 		</div>
 		<div id="s_news"> 
 		<form>
