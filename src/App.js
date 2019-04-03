@@ -175,7 +175,7 @@ class App extends Component {
 				print.innerHTML += 
 				
 				'<div id="block"> <div><span id="author">' + out[j].author   +  '</span> ' +  '<span id="publishdate">' + '    '+ out[j].publishedAt + '</span> </div>' +
-				'<br />' + '<a id="url" href=' + out[j].url + '> &' + '</a>'+
+				'<br />' + '<a id="url" href=' + out[j].url + '> Source' + '</a> <br /> <br />'+
 				'<br /><div id="title">' + out[j].title + '</div>' + 
 				
 				
