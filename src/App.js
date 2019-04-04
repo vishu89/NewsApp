@@ -49,14 +49,12 @@ class App extends Component {
 			{
 			app.innerHTML += 
 			
-			'<div id="block"> <div><span id="author">' + (this.state.items.articles[i].author)    +  '</span> ' +  '<span id="publishdate">' + '    '+ this.state.items.articles[i].publishedAt + '</span> </div>' +
+			'<div id="block"> <div><span id="author">' + (this.state.items.articles[i].author)    
+			    +  '</span> ' +  '<span id="publishdate">' + '    '
+			    + this.state.items.articles[i].publishedAt + '</span> </div>' +
 				'<br />' + '<a id="url" href=' + this.state.items.articles[i].url + '> <span>Source</span>' + '</a><br />'+
 				'<br /><div id="title">' +this.state.items.articles[i].title + '</div>' + 
-				
-				
-				
 				'<br /><div id="des">' + this.state.items.articles[i].content+ '</div> </div> <hr />'
-			
 			
 			console.log("if");
 			}
@@ -77,13 +75,9 @@ class App extends Component {
 	changes = (e) =>
 	{
 		e.preventDefault();
-		
-		//
-		
 		this.setState({input:e.target.value,
     	    isClicked:false});
       }
-		
 		
 			
 	user =(e) =>
@@ -134,14 +128,6 @@ class App extends Component {
 		}
 		else{alert("No input found!"); return  0;} 
 		
-		
-		
-		
-		
-			
-		
-		
-		
 			var print = document.querySelector("#print_search");
 			console.log(out);
 			if(out.length)
@@ -150,17 +136,11 @@ class App extends Component {
 			{console.log(print);
 				print.innerHTML += 
 				
-				'<div id="block"> <div><span id="author">' + out[j].author   +  '</span> ' +  '<span id="publishdate">' + '    '+ out[j].publishedAt + '</span> </div>' +
+				'<div id="block"> <div><span id="author">' + out[j].author   +  '</span> ' +  '<span id="publishdate">' + '    '+ 
+				out[j].publishedAt + '</span> </div>' +
 				'<br />' + '<a id="url" href=' + out[j].url + '> Source' + '</a> <br /> <br />'+
 				'<br /><div id="title">' + out[j].title + '</div>' + 
-				
-				
-				
 				'<br /><div id="des">' + out[j].content+ '</div> </div><br /> <hr /> '
-				
-				
-				
-				
 			}
 			var content = document.querySelector("#content");
 			content.style.display = "none";	
@@ -170,14 +150,6 @@ class App extends Component {
 			}
 			else{ alert("No matches found!") }
 			
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 	
 	
@@ -228,10 +200,7 @@ var news = document.querySelector("#s_news");
 		</div>
     );
 	}
-	
-	
-	
-	
+
 	else
 	{
 			return(
@@ -241,8 +210,6 @@ var news = document.querySelector("#s_news");
 		
 		
 	</div>
-			
-			
 			)
 	}
 	
