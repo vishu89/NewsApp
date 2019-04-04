@@ -20,8 +20,6 @@ class App extends Component {
 			
 		}
 		
-		//
-		
 		fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=eadb6da4bb5847a8b5f5b8a633e53ab9').
 		then(res =>res.json()).
 	then(json => {
@@ -30,9 +28,10 @@ class App extends Component {
 			isLoaded: true,
 			items : json,
 			
-		})
+		}
+		)
 		
-		console.log(this.state.items);
+		//console.log(this.state.items);
 		var news = document.querySelector("#s_news");
 		news.style.display = "none";
 		
@@ -50,10 +49,6 @@ class App extends Component {
 			{
 			app.innerHTML += 
 			
-			
-			
-			
-			
 			'<div id="block"> <div><span id="author">' + (this.state.items.articles[i].author)    +  '</span> ' +  '<span id="publishdate">' + '    '+ this.state.items.articles[i].publishedAt + '</span> </div>' +
 				'<br />' + '<a id="url" href=' + this.state.items.articles[i].url + '> <span>Source</span>' + '</a><br />'+
 				'<br /><div id="title">' +this.state.items.articles[i].title + '</div>' + 
@@ -69,22 +64,12 @@ class App extends Component {
 		}
 	}
 	
-	else  {console.log("else"); app.innerHTML = "<div>" +this.state.output.length+ "</div>";
-			
-			
-	
+	else  
+	{
+		console.log("else"); app.innerHTML = "<div>" +this.state.output.length+ "</div>";
+	}	
 	}
-		
-	})
-		
-		//
-		//
-		
-		
-		
-		//
-		
-		
+	)
 	}
 	
 	
@@ -97,34 +82,25 @@ class App extends Component {
 		
 		this.setState({input:e.target.value,
     	    isClicked:false});
-
-
-
-    			
-      
-      
-     
-
-
-      
       }
 		
 		
-		
-		
+			
 	user =(e) =>
 	{
 		
 		e.preventDefault();
 		
 		var string = this.state.input;
-		console.log(string);
+		//console.log(string);
 		var out = [];
 		if(string)
 		{
 		for(var i=0; i< this.state.items.articles.length; i++)
 		{
-			var art = this.state.items.articles[i].content;
+			var art = this.state.items.articles[i].title;
+			var punctuationless = art.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+            art = punctuationless.replace(/\s{2,}/g," ");
 			if(art)
 			{
 				var s = art.toLowerCase();

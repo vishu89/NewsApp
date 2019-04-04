@@ -100,11 +100,11 @@ input
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: solid #C0C0C0 1px;
+    border-bottom: none;
     padding: 3px 10px;
 
 font-size:15px;
-width: 92%;
+width: 90%;
 text-align: left;
 }
 
